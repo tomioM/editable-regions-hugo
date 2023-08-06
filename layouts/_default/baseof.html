@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{{ partial "head-meta.html" . }}
+		{{ $style := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify }}
+
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Material+Icons" rel="stylesheet" type="text/css">
+		<link href="https://fonts.cloudcannon.com/css/TT-Norms-Pro_500_800.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="{{ $style.Permalink }}">
+	</head>
+	<body>
+		{{ if .Params.show_nav }}{{ partial "nav.html" . }}{{ end }}
+		<main>
+			<div class="container">
+				{{ block "main" . }}{{ end }}
+			</div>
+		</main>
+		{{ partial "footer.html" . }}
+	</body>
+</html>

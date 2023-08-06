@@ -1,0 +1,19 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "CloudCannon Demo"
+pygmentsUseClasses = true
+disableKinds = ["taxonomy", "term"]
+
+[menu]
+
+[[menu.main]]
+identifier = "editable-regions"
+name = "Editable Regions"
+url = "/editable-regions/"
+weight = 110
+
+[[menu.main]]
+identifier = "data-editing"
+name = "Data Editing"
+url = "/data-editing/"
+weight = 110
